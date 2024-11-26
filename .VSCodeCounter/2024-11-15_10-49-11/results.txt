@@ -1,0 +1,115 @@
+Date : 2024-11-15 10:49:11
+Directory : c:\Users\under\Desktop\dma\lib
+Total : 74 files,  9899 codes, 621 comments, 755 blanks, all 11275 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         74 |      9,899 |        621 |        755 |     11,275 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                |         74 |      9,899 |        621 |        755 |     11,275 |
+| . (Files)                                                                        |          1 |         30 |          1 |          4 |         35 |
+| api_controllers                                                                  |          9 |        387 |          4 |         61 |        452 |
+| consts                                                                           |          6 |        201 |          1 |          9 |        211 |
+| controller                                                                       |          1 |          4 |          0 |          2 |          6 |
+| models                                                                           |          7 |      3,882 |        174 |        340 |      4,396 |
+| services                                                                         |         10 |        372 |         11 |         56 |        439 |
+| views                                                                            |         29 |      4,421 |        403 |        228 |      5,052 |
+| views\auth_screen                                                                |          2 |        577 |         31 |         28 |        636 |
+| views\cart_screen                                                                |          2 |        252 |          2 |         11 |        265 |
+| views\categories_screen                                                          |          1 |        816 |          6 |         20 |        842 |
+| views\fav_screen                                                                 |          2 |        156 |          9 |          9 |        174 |
+| views\home_screen                                                                |          5 |        618 |         85 |         39 |        742 |
+| views\item_details                                                               |          7 |        622 |          6 |         36 |        664 |
+| views\profile_screen                                                             |          7 |      1,086 |        166 |         55 |      1,307 |
+| views\search_screen                                                              |          2 |        227 |         94 |         22 |        343 |
+| views\splash_screen                                                              |          1 |         67 |          4 |          8 |         79 |
+| widgets_common                                                                   |         11 |        602 |         27 |         55 |        684 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                         | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\under\Desktop\dma\lib\api_controllers\buy_again_controller.dart         | Dart     |         25 |          0 |          5 |         30 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\categories_controller.dart        | Dart     |        102 |          0 |         12 |        114 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\favs_controller.dart              | Dart     |         45 |          1 |          7 |         53 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\featured_controller.dart          | Dart     |         21 |          0 |          4 |         25 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\item_controller.dart              | Dart     |         23 |          1 |          5 |         29 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\login_controller.dart             | Dart     |         74 |          2 |         11 |         87 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\past_three_months_controller.dart | Dart     |         25 |          0 |          5 |         30 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\sale_controller.dart              | Dart     |         21 |          0 |          4 |         25 |
+| c:\Users\under\Desktop\dma\lib\api_controllers\search_controller.dart            | Dart     |         51 |          0 |          8 |         59 |
+| c:\Users\under\Desktop\dma\lib\consts\colors.dart                                | Dart     |         11 |          0 |          2 |         13 |
+| c:\Users\under\Desktop\dma\lib\consts\consts.dart                                | Dart     |          6 |          0 |          1 |          7 |
+| c:\Users\under\Desktop\dma\lib\consts\fonts.dart                                 | Dart     |          6 |          0 |          1 |          7 |
+| c:\Users\under\Desktop\dma\lib\consts\images.dart                                | Dart     |         22 |          0 |          1 |         23 |
+| c:\Users\under\Desktop\dma\lib\consts\lists.dart                                 | Dart     |         17 |          0 |          3 |         20 |
+| c:\Users\under\Desktop\dma\lib\consts\strings.dart                               | Dart     |        139 |          1 |          1 |        141 |
+| c:\Users\under\Desktop\dma\lib\controller\home_controller.dart                   | Dart     |          4 |          0 |          2 |          6 |
+| c:\Users\under\Desktop\dma\lib\main.dart                                         | Dart     |         30 |          1 |          4 |         35 |
+| c:\Users\under\Desktop\dma\lib\models\category_product_model.dart                | Dart     |        428 |          3 |         32 |        463 |
+| c:\Users\under\Desktop\dma\lib\models\favs_model.dart                            | Dart     |         61 |          3 |          8 |         72 |
+| c:\Users\under\Desktop\dma\lib\models\featured_products_model.dart               | Dart     |        466 |          3 |         36 |        505 |
+| c:\Users\under\Desktop\dma\lib\models\item_details_model.dart                    | Dart     |        491 |          4 |         45 |        540 |
+| c:\Users\under\Desktop\dma\lib\models\orders_model.dart                          | Dart     |      1,033 |        155 |        135 |      1,323 |
+| c:\Users\under\Desktop\dma\lib\models\sale_model.dart                            | Dart     |        906 |          3 |         40 |        949 |
+| c:\Users\under\Desktop\dma\lib\models\search_model.dart                          | Dart     |        497 |          3 |         44 |        544 |
+| c:\Users\under\Desktop\dma\lib\services\add_favs.dart                            | Dart     |          0 |          0 |          1 |          1 |
+| c:\Users\under\Desktop\dma\lib\services\favs_services.dart                       | Dart     |         17 |          0 |          3 |         20 |
+| c:\Users\under\Desktop\dma\lib\services\featured_services.dart                   | Dart     |         18 |          1 |          5 |         24 |
+| c:\Users\under\Desktop\dma\lib\services\item_services.dart                       | Dart     |         19 |          2 |          5 |         26 |
+| c:\Users\under\Desktop\dma\lib\services\past_three_months_services.dart          | Dart     |         25 |          2 |          5 |         32 |
+| c:\Users\under\Desktop\dma\lib\services\remote_services.dart                     | Dart     |        200 |          3 |         17 |        220 |
+| c:\Users\under\Desktop\dma\lib\services\sale_services.dart                       | Dart     |         18 |          1 |          5 |         24 |
+| c:\Users\under\Desktop\dma\lib\services\search_services.dart                     | Dart     |         29 |          2 |          5 |         36 |
+| c:\Users\under\Desktop\dma\lib\services\signup_services.dart                     | Dart     |         23 |          0 |          5 |         28 |
+| c:\Users\under\Desktop\dma\lib\services\your_orders_services.dart                | Dart     |         23 |          0 |          5 |         28 |
+| c:\Users\under\Desktop\dma\lib\views\auth_screen\login_screen.dart               | Dart     |         87 |          0 |          4 |         91 |
+| c:\Users\under\Desktop\dma\lib\views\auth_screen\signup_screen.dart              | Dart     |        490 |         31 |         24 |        545 |
+| c:\Users\under\Desktop\dma\lib\views\cart_screen\cart_products.dart              | Dart     |        167 |          2 |          7 |        176 |
+| c:\Users\under\Desktop\dma\lib\views\cart_screen\cart_screen.dart                | Dart     |         85 |          0 |          4 |         89 |
+| c:\Users\under\Desktop\dma\lib\views\categories_screen\categories_screen.dart    | Dart     |        816 |          6 |         20 |        842 |
+| c:\Users\under\Desktop\dma\lib\views\fav_screen\fav_screen.dart                  | Dart     |         45 |          0 |          4 |         49 |
+| c:\Users\under\Desktop\dma\lib\views\fav_screen\fav_tile.dart                    | Dart     |        111 |          9 |          5 |        125 |
+| c:\Users\under\Desktop\dma\lib\views\home_screen\featured_products.dart          | Dart     |         94 |          0 |          4 |         98 |
+| c:\Users\under\Desktop\dma\lib\views\home_screen\home.dart                       | Dart     |         90 |         68 |         13 |        171 |
+| c:\Users\under\Desktop\dma\lib\views\home_screen\home_screen.dart                | Dart     |        248 |          9 |         15 |        272 |
+| c:\Users\under\Desktop\dma\lib\views\home_screen\new_products.dart               | Dart     |        103 |          6 |          2 |        111 |
+| c:\Users\under\Desktop\dma\lib\views\home_screen\sale_products.dart              | Dart     |         83 |          2 |          5 |         90 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\add_to_cart.dart               | Dart     |         48 |          1 |          5 |         54 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\attributes_button.dart         | Dart     |         57 |          0 |          4 |         61 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\details_getter.dart            | Dart     |        123 |          0 |          4 |        127 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\featured_view.dart             | Dart     |         60 |          0 |          4 |         64 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\item_details_screen.dart       | Dart     |        236 |          2 |         10 |        248 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\quantity_controller.dart       | Dart     |         12 |          2 |          4 |         18 |
+| c:\Users\under\Desktop\dma\lib\views\item_details\sales_view.dart                | Dart     |         86 |          1 |          5 |         92 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\account_details_screen.dart  | Dart     |        179 |          1 |         13 |        193 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\addresses_screen.dart        | Dart     |        281 |          2 |         17 |        300 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\buy_again_products.dart      | Dart     |         63 |          2 |          4 |         69 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\past_orders_screen.dart      | Dart     |        175 |        144 |          7 |        326 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\profile_screen.dart          | Dart     |        211 |         12 |          6 |        229 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\your_orders.dart             | Dart     |         54 |          5 |          3 |         62 |
+| c:\Users\under\Desktop\dma\lib\views\profile_screen\your_orders_screen.dart      | Dart     |        123 |          0 |          5 |        128 |
+| c:\Users\under\Desktop\dma\lib\views\search_screen\search_screen.dart            | Dart     |         99 |         91 |         14 |        204 |
+| c:\Users\under\Desktop\dma\lib\views\search_screen\search_suggestion_screen.dart | Dart     |        128 |          3 |          8 |        139 |
+| c:\Users\under\Desktop\dma\lib\views\splash_screen\splash_screen.dart            | Dart     |         67 |          4 |          8 |         79 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\applogo_widget.dart                | Dart     |          9 |          1 |          2 |         12 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\bg_widget.dart                     | Dart     |          8 |          0 |          2 |         10 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\categories_button.dart             | Dart     |         48 |          2 |          2 |         52 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\custom_textfield.dart              | Dart     |         31 |          0 |          2 |         33 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\favs_button.dart                   | Dart     |         79 |          3 |         12 |         94 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\filter_button.dart                 | Dart     |        148 |         10 |          7 |        165 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\our_button.dart                    | Dart     |         10 |          1 |          2 |         13 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\pagination_widget.dart             | Dart     |         83 |          7 |         14 |        104 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\product_tile.dart                  | Dart     |         73 |          0 |          4 |         77 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\search_tile.dart                   | Dart     |         70 |          3 |          4 |         77 |
+| c:\Users\under\Desktop\dma\lib\widgets_common\searchbar.dart                     | Dart     |         43 |          0 |          4 |         47 |
+| Total                                                                            |          |      9,899 |        621 |        755 |     11,275 |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
