@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: dmaDarkGrey,
         elevation: 5,
-        toolbarHeight: screenHeight * 0.08,
+        // toolbarHeight: screenHeight * 0.08,
         automaticallyImplyLeading: false,
         title: const Searchbar(),
       ),
