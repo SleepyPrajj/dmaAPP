@@ -10,9 +10,10 @@ class Searchbar extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Padding(
-      padding: EdgeInsets.all(screenWidth * 0.02), // Dynamic padding
+      padding: EdgeInsets.symmetric(
+          horizontal: screenWidth * 0.02), // Slimmer padding
       child: SizedBox(
-        height: screenWidth * 0.08, // Dynamic height
+        height: screenWidth * 0.1, // Smaller height
         child: TextField(
           keyboardType: TextInputType.none,
           showCursor: false,
@@ -24,19 +25,24 @@ class Searchbar extends StatelessWidget {
             filled: true,
             hintText: search,
             hintStyle: TextStyle(
-              fontSize: screenWidth * 0.02, // Dynamic font size
+              fontSize: screenWidth * 0.04, // Smaller text
               fontFamily: regular,
             ),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                  width: screenWidth * 0.002,
-                  color: dmaRed), // Dynamic border width
+                width: screenWidth * 0.0015, // Slimmer border
+                color: dmaRed,
+              ),
               borderRadius: BorderRadius.circular(
-                  screenWidth * 0.020), // Dynamic border radius
+                screenWidth * 0.02, // Smaller radius
+              ),
             ),
             prefixIcon: Icon(
               Icons.search_outlined,
-              size: screenWidth * 0.07, // Dynamic icon size
+              size: screenWidth * 0.05, // Smaller icon
+            ),
+            contentPadding: EdgeInsets.symmetric(
+              vertical: screenWidth * 0.01, // Slimmer vertical padding
             ),
           ),
         ),

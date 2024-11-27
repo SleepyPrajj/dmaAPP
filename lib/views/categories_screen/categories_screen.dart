@@ -838,6 +838,8 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               color: dmaDarkGrey,
               height: 1,
               width: double.infinity,
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewPadding.bottom + 8),
             );
           } else {
             return Container(
@@ -847,61 +849,56 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.sort, color: dmaDarkGrey),
-                          const SizedBox(width: 4),
-                          "Sort"
-                              .text
-                              .size(18)
-                              .fontWeight(FontWeight.bold)
-                              .fontFamily(badSu)
-                              .color(dmaDarkGrey)
-                              .make(),
-                        ],
-                      ).onTap(() {
-                        _showSortByMenu(context);
-                      }),
-                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.sort, color: dmaDarkGrey),
+                        const SizedBox(width: 4),
+                        "Sort"
+                            .text
+                            .size(18)
+                            .fontWeight(FontWeight.bold)
+                            .fontFamily(badSu)
+                            .color(dmaDarkGrey)
+                            .make(),
+                      ],
+                    ).onTap(() {
+                      _showSortByMenu(context);
+                    }),
                     const VerticalDivider(
                       color: dmaDarkGrey,
                       thickness: 2,
                       width: 1,
                     ),
-                    Expanded(
-                      child: Obx(() {
-                        return showfilter.value
-                            ? Column(
-                                children: [
-                                  const VerticalDivider(
-                                      color: dmaDarkGrey, thickness: 1),
-                                  Expanded(
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        const Icon(Icons.filter_alt,
-                                            color: dmaDarkGrey),
-                                        const SizedBox(width: 4),
-                                        "Filter"
-                                            .text
-                                            .size(18)
-                                            .fontFamily(badSu)
-                                            .fontWeight(FontWeight.bold)
-                                            .color(dmaDarkGrey)
-                                            .make(),
-                                      ],
-                                    ).onTap(() {
-                                      _showFilterMenu(context);
-                                    }),
-                                  ),
-                                ],
-                              )
-                            : const SizedBox.shrink();
-                      }),
-                    )
+                    Obx(() {
+                      return showfilter.value
+                          ? Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const VerticalDivider(
+                                    color: dmaDarkGrey, thickness: 1),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(Icons.filter_alt,
+                                        color: dmaDarkGrey),
+                                    const SizedBox(width: 4),
+                                    "Filter"
+                                        .text
+                                        .size(18)
+                                        .fontFamily(badSu)
+                                        .fontWeight(FontWeight.bold)
+                                        .color(dmaDarkGrey)
+                                        .make()
+                                        .centered(),
+                                  ],
+                                ).onTap(() {
+                                  _showFilterMenu(context);
+                                }),
+                              ],
+                            )
+                          : const SizedBox.shrink();
+                    })
                   ]),
             );
           }
