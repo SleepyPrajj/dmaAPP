@@ -11,13 +11,13 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.example.dma</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>CFBundleName</key>
 	<string>DMA inc</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
