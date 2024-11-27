@@ -50,6 +50,7 @@ class _ItemScreenState extends State<ItemScreen> {
     return Scaffold(
         backgroundColor: dmaWhite,
         appBar: AppBar(
+          toolbarHeight: MediaQuery.of(context).size.height * 0.08,
           title: Row(
             children: [
               const Expanded(child: Searchbar()),
