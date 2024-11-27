@@ -12,7 +12,7 @@ class Searchbar extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(screenWidth * 0.02), // Dynamic padding
       child: SizedBox(
-        height: screenWidth * 0.12, // Dynamic height
+        height: screenWidth * 0.08, // Dynamic height
         child: TextField(
           keyboardType: TextInputType.none,
           showCursor: false,
@@ -24,7 +24,7 @@ class Searchbar extends StatelessWidget {
             filled: true,
             hintText: search,
             hintStyle: TextStyle(
-              fontSize: screenWidth * 0.05, // Dynamic font size
+              fontSize: screenWidth * 0.02, // Dynamic font size
               fontFamily: regular,
             ),
             enabledBorder: OutlineInputBorder(
@@ -32,7 +32,7 @@ class Searchbar extends StatelessWidget {
                   width: screenWidth * 0.002,
                   color: dmaRed), // Dynamic border width
               borderRadius: BorderRadius.circular(
-                  screenWidth * 0.025), // Dynamic border radius
+                  screenWidth * 0.020), // Dynamic border radius
             ),
             prefixIcon: Icon(
               Icons.search_outlined,
