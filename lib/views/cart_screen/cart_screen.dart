@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/views/cart_screen/checkout_screen.dart';
 import 'package:get/get.dart';
 import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 import 'package:dma_inc/views/cart_screen/cart_products.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -75,7 +78,9 @@ class _CartScreenState extends State<CartScreen> {
                           Get.snackbar("Total less then \$150",
                               "Please add more items to make your total amount more than \$150");
                         } else {
-                          Get.to(() => const CheckoutScreen());
+                          (Platform.isAndroid)
+                              ? Get.to(() => const CheckoutScreen())
+                              : buyOnWebsite();
                         }
                       },
                       height: 76,
@@ -93,5 +98,15 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
         ));
+  }
+
+  void buyOnWebsite() async {
+    Get.snackbar("Going to Website",
+        'Due to regualtions by app store, please complete the checkout on our website!',
+        animationDuration: const Duration(seconds: 2));
+    final Uri url = Uri.parse('https://dma-inc.net/cart/');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

@@ -81,7 +81,7 @@ class PrivacyPolicyWidget extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pop(); // Close the menu
                 },
-                child: Text(
+                child: const Text(
                   "Close",
                   style: TextStyle(color: dmaWhite, fontSize: 12),
                 ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class ForgetPassword extends StatefulWidget {
+  const ForgetPassword({super.key});
+
   @override
   _ForgetPasswordState createState() => _ForgetPasswordState();
 }
@@ -31,14 +33,14 @@ class _ForgetPasswordState extends State<ForgetPassword> {
       if (response.statusCode == 200) {
         // Success
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
               content: Text(
                   "Password reset link sent if the email exists, Please Check your email.")),
         );
       } else {
         // Failure
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
               content: Text(
                   "Password reset link sent if the email exists, Please Check your email.")),
         );
@@ -59,7 +61,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
     return Align(
       alignment: Alignment.centerRight,
       child: _isLoading
-          ? CircularProgressIndicator() // Show loading indicator when loading
+          ? const CircularProgressIndicator() // Show loading indicator when loading
           : TextButton(
               onPressed: () async {
                 // Prompt the user for their email
@@ -68,22 +70,22 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text("Enter Email"),
+                      title: const Text("Enter Email"),
                       content: TextField(
                         controller: emailController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: "Enter your registered email",
                         ),
                       ),
                       actions: [
                         TextButton(
-                          child: Text("Cancel"),
+                          child: const Text("Cancel"),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
                         ),
                         TextButton(
-                          child: Text("Submit"),
+                          child: const Text("Submit"),
                           onPressed: () {
                             Navigator.of(context).pop(emailController.text);
                           },
@@ -97,7 +99,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   await requestPasswordReset(email);
                 }
               },
-              child: Text("Forgot Password?"),
+              child: const Text("Forgot Password?"),
             ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:dma_inc/views/profile_screen/account_details_screen.dart';
 import 'package:dma_inc/views/profile_screen/addresses_screen.dart';
 import 'package:dma_inc/views/profile_screen/buy_again_products.dart';
 import 'package:dma_inc/views/profile_screen/catalog_screen.dart';
+import 'package:dma_inc/views/profile_screen/deete_account.dart';
 import 'package:dma_inc/views/profile_screen/your_orders_screen.dart';
 import 'package:dma_inc/widgets_common/bg_widget.dart';
 import 'package:dma_inc/consts/consts.dart';
@@ -156,18 +157,20 @@ class ProfileScreen extends StatelessWidget {
                             .fontFamily(bold)
                             .make(),
                       ),
-                      // const Divider(thickness: 2),
-                      // InkWell(
-                      //   onTap: () {},
-                      //   child: "Your Coupons"
-                      //       .text
-                      //       .color(dmaWhite)
-                      //       .bold
-                      //       .size(25)
-                      //       .align(TextAlign.left)
-                      //       .fontFamily(bold)
-                      //       .make(),
-                      // ),
+                      const Divider(thickness: 2),
+                      InkWell(
+                        onTap: () {
+                          Get.to(() => const DeleteAccount());
+                        },
+                        child: "Delete Account!"
+                            .text
+                            .color(dmaWhite)
+                            .bold
+                            .size(25)
+                            .align(TextAlign.left)
+                            .fontFamily(bold)
+                            .make(),
+                      ),
                       const Divider(thickness: 2),
                       10.heightBox,
                       "Buy Again!"
