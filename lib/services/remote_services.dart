@@ -53,6 +53,9 @@ class RemoteServices {
       case 'Lowers':
         title = '5099';
         break;
+      case 'Reusable Fabric Wraps':
+        title = '6618';
+        break;
     }
 
     String baseUrl = 'http://dma-inc.net/wp-json/wc/v3/products?';

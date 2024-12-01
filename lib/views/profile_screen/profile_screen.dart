@@ -4,7 +4,7 @@ import 'package:dma_inc/views/profile_screen/account_details_screen.dart';
 import 'package:dma_inc/views/profile_screen/addresses_screen.dart';
 import 'package:dma_inc/views/profile_screen/buy_again_products.dart';
 import 'package:dma_inc/views/profile_screen/catalog_screen.dart';
-import 'package:dma_inc/views/profile_screen/deete_account.dart';
+import 'package:dma_inc/views/profile_screen/delete_account.dart';
 import 'package:dma_inc/views/profile_screen/your_orders_screen.dart';
 import 'package:dma_inc/widgets_common/bg_widget.dart';
 import 'package:dma_inc/consts/consts.dart';

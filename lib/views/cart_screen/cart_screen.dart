@@ -102,10 +102,11 @@ class _CartScreenState extends State<CartScreen> {
 
   void buyOnWebsite() async {
     Get.snackbar("Going to Website",
-        'Due to regualtions by app store, please complete the checkout on our website!',
-        animationDuration: const Duration(seconds: 2));
-    final Uri url = Uri.parse('https://dma-inc.net/cart/');
+        'Due to regualtions by app store, please complete the checkout on our website');
+    PersistentShoppingCart().clearCart();
+    final Uri url = Uri.parse('https://dma-inc.net/cart');
     if (!await launchUrl(url)) {
+      Get.snackbar('error', 'Could not launch $url');
       throw Exception('Could not launch $url');
     }
   }

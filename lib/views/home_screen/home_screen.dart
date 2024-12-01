@@ -65,8 +65,17 @@ class HomeScreen extends StatelessWidget {
                               .clip(Clip.antiAlias)
                               .margin(const EdgeInsets.symmetric(horizontal: 8))
                               .make()
-                              .onTap(() => Get.to(CategoriesScreen(
-                                  title: swiperListString[index])));
+                              .onTap(() {
+                            if (index != 2) {
+                              Get.to(CategoriesScreen(
+                                  title: swiperListString[index]));
+                            } else {
+                              Get.to(const ItemScreen(
+                                  title:
+                                      "XTS-1IN-30MM MULTI-SIZED UNI-MOUNT SCOPE RINGS",
+                                  id: 195068));
+                            }
+                          });
                         },
                       ),
                       10.heightBox,

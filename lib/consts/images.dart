@@ -6,21 +6,21 @@ const icProfile = "assets/icons/profile.png";
 const icCart = "assets/icons/cart.png";
 const icSearch = "assets/icons/search.png";
 const dualRifleCases =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/image_2024-03-25_21-05-09-1-1.png";
+    'https://dma-inc.net/wp-content/uploads/2024/10/image_2024-03-25_21-05-09-1-1.png';
 const blackFridaySaleBanner =
-    'https://dmainc.b-cdn.net/wp-content/uploads/2024/11/banner1.png';
+    'https://dma-inc.net/wp-content/uploads/2024/11/banner1.png';
 const dvrSecurity =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/image_2024-03-08_22-43-47-1300x700-2-1.png";
+    'https://dma-inc.net/wp-content/uploads/2024/10/image_2024-03-08_22-43-47-1300x700-2-1.png';
 const glockBarrels =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/banner-1.jpg";
+    'https://dma-inc.net/wp-content/uploads/2024/10/banner-1.jpg';
 const glockSlides =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/thumbnail_image-1-1.png";
+    "https://dma-inc.net/wp-content/uploads/2024/10/thumbnail_image-1-1.png";
 const steelPlates =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/steelplates-2-1.jpg";
+    'https://dma-inc.net/wp-content/uploads/2024/10/steelplates-2-1.jpg';
 const stunGuns =
-    "https://dmainc.b-cdn.net/wp-content/uploads/2024/10/banner3-1300x704_optimized.png";
+    'https://dma-inc.net/wp-content/uploads/2024/10/banner3-1300x704_optimized.png';
 const autoKnivesImage =
-    'https://dmainc.b-cdn.net/wp-content/uploads/2024/10/autoknivesparts-1.jpg';
+    'https://dma-inc.net/wp-content/uploads/2024/10/autoknivesparts-1.jpg';
 const gunParts = "assets/icons/gun-parts.png";
 const knives = "assets/icons/knives.png";
 const martialArts = "assets/icons/martial-arts.png";

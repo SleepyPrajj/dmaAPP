@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'package:get_storage/get_storage.dart';
+import 'package:http/http.dart' as http;
 import 'package:dma_inc/controller/home_controller.dart';
 import 'package:dma_inc/views/home_screen/home.dart';
 import 'package:dma_inc/views/item_details/quantity_controller.dart';
@@ -256,6 +259,38 @@ class _ItemScreenState extends State<ItemScreen> {
                 );
               }
             })));
+  }
+
+  Future<void> addToCartApiCall(String itemID, int quantity) async {
+    const String apiUrl = "https://dma-inc.net/wp-json/cocart/v1/add-item";
+    print('calling');
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization":
+              GetStorage().read('token'), // Replace with your token
+        },
+        body: jsonEncode({
+          "product_id": itemID,
+          "quantity": quantity,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final responseBody = jsonDecode(response.body);
+        Get.snackbar("Success", "Item added to cart!");
+        print("API Response: $responseBody");
+      } else {
+        print("Failed to add to cart: ${response.statusCode}");
+        print("Response body: ${response.body}");
+        Get.snackbar("Error", "Failed to add item to cart.");
+      }
+    } catch (e) {
+      print("Error during API call: $e");
+      Get.snackbar("Error", "Something went wrong.");
+    }
   }
 
   _launchCaller() async {

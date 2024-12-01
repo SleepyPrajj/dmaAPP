@@ -1,9 +1,8 @@
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/models/item_details_model.dart';
+import 'package:dma_inc/views/item_details/add_to_cart_listener.dart';
 import 'package:dma_inc/views/item_details/quantity_controller.dart';
 import 'package:get/get.dart';
-import 'package:persistent_shopping_cart/model/cart_model.dart';
-import 'package:persistent_shopping_cart/persistent_shopping_cart.dart';
 
 class AddToCart extends StatelessWidget {
   final ItemDetails item;
@@ -21,33 +20,40 @@ class AddToCart extends StatelessWidget {
     } else {
       itemID = attributeItemID!;
     }
-    return Container(
+    return GestureDetector(
+        child: Container(
       color: dmaRed,
       child: Obx(() {
-        // Rebuilds whenever quantityController.quantity changes
-        return PersistentShoppingCart().showAndUpdateCartItemWidget(
-          inCartWidget: "Remove from Cart"
-              .text
-              .color(dmaWhite)
-              .size(25)
-              .fontFamily(bold)
-              .make(),
-          notInCartWidget: "Add to cart"
-              .text
-              .color(dmaWhite)
-              .size(25)
-              .fontFamily(bold)
-              .make(),
-          product: PersistentShoppingCartItem(
-            productId: itemID,
-            productName: item.name,
-            unitPrice: double.parse(item.price),
+        return AddToCartListener(
+            itemID: itemID,
+            quantity: quantityController.quantity.value,
+            price: item.price,
+            src: item.images[0].src,
+            name: item.name);
 
-            quantity: quantityController.quantity.value, // Dynamic quantity
-            productThumbnail: item.images[0].src,
-          ),
-        );
+        // Rebuilds whenever quantityController.quantity changes
+        // return PersistentShoppingCart().showAndUpdateCartItemWidget(
+        // inCartWidget: "Remove from Cart"
+        //     .text
+        //     .color(dmaWhite)
+        //     .size(25)
+        //     .fontFamily(bold)
+        //     .make(),
+        // notInCartWidget: "Add to cart"
+        //     .text
+        //     .color(dmaWhite)
+        //     .size(25)
+        //     .fontFamily(bold)
+        //     .make(),
+        // product: PersistentShoppingCartItem(
+        //   productId: itemID,
+        //   productName: item.name,
+        //   unitPrice: double.parse(item.price),
+
+        //   quantity: quantityController.quantity.value, // Dynamic quantity
+        //   productThumbnail: item.images[0].src,
+        // ),
       }),
-    );
+    ));
   }
 }
