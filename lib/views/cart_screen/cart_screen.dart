@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/views/cart_screen/checkout_screen.dart';
 import 'package:get/get.dart';
@@ -105,7 +104,7 @@ class _CartScreenState extends State<CartScreen> {
         'Due to regualtions by app store, please complete the checkout on our website');
     PersistentShoppingCart().clearCart();
     final Uri url = Uri.parse('https://dma-inc.net/cart');
-    if (!await launchUrl(url)) {
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
       Get.snackbar('error', 'Could not launch $url');
       throw Exception('Could not launch $url');
     }
