@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
@@ -7,7 +8,6 @@ Future<void> addToCartApiCall(String itemID, int quantity) async {
   const String apiUrl = "https://dma-inc.net/wp-json/cocart/v1/add-item";
   Map<String, String>? cartItemsMap =
       GetStorage().read<Map<String, String>>("cart_items_map");
-  print('calling');
   try {
     final response = await http.post(
       Uri.parse(apiUrl),
@@ -31,15 +31,13 @@ Future<void> addToCartApiCall(String itemID, int quantity) async {
       Get.snackbar("Success", "Item added to cart!");
       cartItemsMap?[productId.toString()] = key;
       GetStorage().write("cart_items_map", cartItemsMap);
-
-      print("API Response: $responseBody");
     } else {
-      print("Failed to add to cart: ${response.statusCode}");
-      print("Response body: ${response.body}");
+      log("Failed to add to cart: ${response.statusCode}");
+      log("Response body: ${response.body}");
       Get.snackbar("Error", "Failed to add item to cart.");
     }
   } catch (e) {
-    print("Error during API call: $e");
+    log("Error during API call: $e");
     Get.snackbar("Error", "Something went wrong.");
   }
 }

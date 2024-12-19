@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/views/item_details/item_details_screen.dart';
@@ -12,10 +13,10 @@ class CatalogScreen extends StatelessWidget {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-      print('Running on ${androidInfo.model}');
+      log('Running on ${androidInfo.model}');
     } else if (Platform.isIOS) {
       IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-      print('Running on ${iosInfo.model}');
+      log('Running on ${iosInfo.model}');
     }
   }
 

@@ -53,7 +53,6 @@ class CategoriesController extends GetxController {
     currentFilterPage = page;
     try {
       isLoading(true);
-      print("controller subCategoryID: $subCategoryID");
 
       var products = await RemoteServices.fetchFilteredProducts(
           categoryTitle!,

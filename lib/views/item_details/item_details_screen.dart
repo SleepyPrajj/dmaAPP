@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:dma_inc/controller/home_controller.dart';
@@ -128,7 +129,6 @@ class _ItemScreenState extends State<ItemScreen> {
                                               .value!
                                               .variations[index]
                                               .toString();
-                                          print(attributeItemID);
                                         });
                                       },
                                     );
@@ -263,7 +263,6 @@ class _ItemScreenState extends State<ItemScreen> {
 
   Future<void> addToCartApiCall(String itemID, int quantity) async {
     const String apiUrl = "https://dma-inc.net/wp-json/cocart/v1/add-item";
-    print('calling');
     try {
       final response = await http.post(
         Uri.parse(apiUrl),
@@ -281,14 +280,14 @@ class _ItemScreenState extends State<ItemScreen> {
       if (response.statusCode == 200) {
         final responseBody = jsonDecode(response.body);
         Get.snackbar("Success", "Item added to cart!");
-        print("API Response: $responseBody");
+        log("API Response: $responseBody");
       } else {
-        print("Failed to add to cart: ${response.statusCode}");
-        print("Response body: ${response.body}");
+        log("Failed to add to cart: ${response.statusCode}");
+        log("Response body: ${response.body}");
         Get.snackbar("Error", "Failed to add item to cart.");
       }
     } catch (e) {
-      print("Error during API call: $e");
+      log("Error during API call: $e");
       Get.snackbar("Error", "Something went wrong.");
     }
   }

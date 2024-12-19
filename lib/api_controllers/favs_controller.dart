@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dma_inc/models/favs_model.dart';
 import 'package:dma_inc/services/favs_services.dart';
 import 'package:get/get.dart';
@@ -20,15 +22,12 @@ class FavController extends GetxController {
     isLoading(true);
 
     try {
-      print("in controller");
-      print("id: ${storage.read('customer_id')}");
       var favs = await favServices.fetchFavItems();
       favItems.value = favs;
       List<String> prodIds = favs.map((item) => item.prodId).toList();
       storage.write('favorite_ids', prodIds);
-      print(storage.read('favorite_ids'));
     } catch (e) {
-      print("Error fetching favorite items: $e");
+      log("Error fetching favorite items: $e");
     } finally {
       isLoading(false);
     }
@@ -42,9 +41,8 @@ class FavController extends GetxController {
       favItems.value = favs;
       List<String> prodIds = favs.map((item) => item.prodId).toList();
       storage.write('favorite_ids', prodIds);
-      print(storage.read('favorite_ids'));
     } catch (e) {
-      print("Error fetching favorite items: $e");
+      log("Error fetching favorite items: $e");
     } finally {
       isLoading(false);
     }

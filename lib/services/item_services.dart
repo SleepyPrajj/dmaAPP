@@ -9,10 +9,8 @@ class ItemServices {
   // ignore: non_constant_identifier_names
   static Future<ItemDetails> fetchItem(int ID) async {
     http.Response response;
-    print(ID);
     response = await client.get(Uri.parse(
         'http://dma-inc.net/wp-json/wc/v3/products/$ID?consumer_key=$key&consumer_secret=$shhh'));
-    print(response.body);
 
     if (response.statusCode == 200) {
       var jsonString = response.body;

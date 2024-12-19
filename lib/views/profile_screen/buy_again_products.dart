@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/models/orders_model.dart' as mod;
 import 'package:dma_inc/views/item_details/item_details_screen.dart';
@@ -55,7 +57,7 @@ class BuyAgainProducts extends StatelessWidget {
               .padding(const EdgeInsets.all(8))
               .make()
               .onTap(() {
-            print("name: ${product.name}\n id: ${product.id}");
+            log("name: ${product.name}\n id: ${product.id}");
             Get.to(() => ItemScreen(
                   title: product.name,
                   id: product.productId,

@@ -184,7 +184,6 @@ class ProfileScreen extends StatelessWidget {
                       10.heightBox,
                       Obx(() {
                         if (buyAgainController.isLoading.value) {
-                          print(buyAgainController.isLoading.value);
                           return Column(children: [
                             Container(
                               color: dmaDarkGrey,

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dma_inc/api_controllers/favs_controller.dart';
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/models/favs_model.dart' as mod;
@@ -34,7 +36,7 @@ class _FavTileState extends State<FavTile> {
         Get.snackbar('Error', '${response.statusCode}');
       }
     } catch (e) {
-      print('Exception occurred: $e');
+      log('Exception occurred: $e');
     }
   }
 

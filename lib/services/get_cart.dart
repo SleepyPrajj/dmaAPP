@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 
@@ -28,16 +29,12 @@ Future<void> fetchAndStoreCartItems() async {
 
         // Store the map in GetStorage
         GetStorage().write("cart_items_map", cartItemsMap);
-
-        print("Cart items map saved successfully: $cartItemsMap");
-      } else {
-        print("No items found in the cart.");
-      }
+      } else {}
     } else {
-      print("Failed to fetch cart: ${response.statusCode}");
-      print("Response: ${response.body}");
+      log("Failed to fetch cart: ${response.statusCode}");
+      log("Response: ${response.body}");
     }
   } catch (e) {
-    print("Error during API call: $e");
+    log("Error during API call: $e");
   }
 }

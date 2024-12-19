@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:dma_inc/consts/consts.dart';
 import 'package:get/get.dart';
@@ -75,11 +76,11 @@ class _AccountDetailsScreenState extends State<AccountDetailsScreen> {
 
       if (response.statusCode == 200) {
         Get.snackbar("Success!", "Account details updated successfully.");
-        print('Update successful: ${response.body}');
+        log('Update successful: ${response.body}');
       } else {
         Get.snackbar("Error",
             "Failed to update account details.\nError Code ${response.statusCode}");
-        print('Failed to update. Status code: ${response.body}');
+        log('Failed to update. Status code: ${response.body}');
       }
     } catch (e) {
       Get.snackbar("Error", "$e");

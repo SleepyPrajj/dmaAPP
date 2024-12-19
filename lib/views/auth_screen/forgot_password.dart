@@ -29,7 +29,6 @@ class _ForgetPasswordState extends State<ForgetPassword> {
       setState(() {
         _isLoading = false;
       });
-      print(response.body);
       if (response.statusCode == 200) {
         // Success
         ScaffoldMessenger.of(context).showSnackBar(

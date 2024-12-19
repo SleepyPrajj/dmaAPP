@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:dma_inc/views/home_screen/home.dart';
-import 'package:dma_inc/views/home_screen/home_screen.dart';
 import 'package:dma_inc/widgets_common/private_policy_dialogue.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -65,7 +64,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             isLoading = false;
           });
         } else {
-          print(response.body);
           Get.snackbar('Error', 'Failed to load customer details.');
         }
       } finally {
@@ -113,15 +111,12 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             'You saved \$${couponDiscount.toStringAsFixed(2)}');
       } else {
         Get.snackbar('Invalid Coupon', 'Please try a different coupon.');
-        print(response.body);
         isApplyingCoupon = false;
       }
     }
   }
 
   Future<void> _placeOrder() async {
-    print("in place order");
-    print(_billingFormKey.currentState!.validate());
     if (_billingFormKey.currentState!.validate() &&
         (!showShippingDetails || _shippingFormKey.currentState!.validate())) {
       final orderDetails = {

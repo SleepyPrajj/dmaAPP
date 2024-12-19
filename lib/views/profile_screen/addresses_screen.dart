@@ -163,15 +163,12 @@ class _AddressUpdateScreenState extends State<AddressUpdateScreen> {
 
       if (response.statusCode == 200) {
         Get.snackbar("Success!", "Information Updated Successfully!");
-        print('Update successful: ${response.body}');
         showBillingForm = false;
         showShippingForm = false;
         // Show success message or navigate to a different screen
       } else {
         Get.snackbar("Error",
             "Could not update information\nError Code ${response.statusCode}");
-        print('Failed to update. Status code: ${response.statusCode}');
-        // Handle error
       }
     } catch (e) {
       Get.snackbar("Error", "$e"); // Handle network or other errors

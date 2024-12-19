@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:dma_inc/consts/consts.dart';
+import 'package:dma_inc/services/get_cart.dart';
 import 'package:dma_inc/views/home_screen/home.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -34,13 +36,12 @@ class LoginController extends GetxController {
 
         // Retrieve customer ID based on email
         await getCustomerIdByEmail(data['user_email']);
-
+        fetchAndStoreCartItems();
         Get.offAll(() => const Home()); // Navigate to Home screen
       } else {
         Get.snackbar('Login Failed', 'Invalid email or password');
       }
     } catch (e) {
-      print(e);
       Get.snackbar('Error', 'Something went wrong');
     } finally {
       isLoading(false);
@@ -68,17 +69,14 @@ class LoginController extends GetxController {
           storage.write(
               'customer_id', customerId); // Store customer ID if needed
           storage.write('avatar_url', avatarUrl);
-
-          print('Customer ID: $customerId');
-          print(avatarUrl);
         } else {
-          print('No customer found with this email.');
+          log('No customer found with this email.');
         }
       } else {
-        print('Failed to retrieve customer data');
+        log('Failed to retrieve customer data');
       }
     } catch (e) {
-      print('Error fetching customer ID: $e');
+      log('Error fetching customer ID: $e');
     }
   }
 

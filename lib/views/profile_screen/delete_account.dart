@@ -1,7 +1,6 @@
+import 'dart:developer';
 import 'dart:io';
 import 'package:dma_inc/consts/consts.dart';
-import 'package:dma_inc/views/item_details/item_details_screen.dart';
-import 'package:get/get.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -12,10 +11,8 @@ class DeleteAccount extends StatelessWidget {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-      print('Running on ${androidInfo.model}');
     } else if (Platform.isIOS) {
       IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
-      print('Running on ${iosInfo.model}');
     }
   }
 
@@ -90,7 +87,7 @@ class DeleteAccount extends StatelessWidget {
                         throw 'Could not launch $emailUri';
                       }
                     } catch (e) {
-                      print(e); // Log or show error to the user
+                      log(e.toString()); // Log or show error to the user
                     }
                   },
                   child: "REQUEST DELETION"

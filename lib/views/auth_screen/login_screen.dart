@@ -53,7 +53,7 @@ class Login extends StatelessWidget {
                   //     child: forgetPass.text.make(),
                   //   ),
                   // ),
-                  ForgetPassword(),
+                  const ForgetPassword(),
                   (screenHeight * 0.01).heightBox,
                   Obx(() => authController.isLoading.value
                       ? Center(

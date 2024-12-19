@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dma_inc/consts/consts.dart';
 import 'package:dma_inc/models/category_product_model.dart';
 import 'package:http/http.dart' as http;
@@ -160,7 +162,7 @@ class RemoteServices {
           : 'category=$title';
     }
 
-    print(categoryOrTag); // This will print the final result
+    log(categoryOrTag); // This will print the final result
 
     // String categoryOrTag = '';
     // print(subCategoryID);
@@ -253,7 +255,6 @@ class RemoteServices {
     }
 
     http.Response response = await client.get(Uri.parse(url));
-    print(response.body);
     if (response.statusCode == 200) {
       var jsonString = response.body;
       var catResults = catFromJson(jsonString);
